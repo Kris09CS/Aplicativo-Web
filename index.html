@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Correcaminos Delivery</title>
+
+	<!-- Normalize V8.0.1 -->
+	<link rel="stylesheet" href="./css/normalize.css">
+
+	<!-- MDBootstrap V5 -->
+	<link rel="stylesheet" href="./css/mdb.min.css">
+
+	<!-- Font Awesome V5.15.1 -->
+	<link rel="stylesheet" href="./css/all.css">
+
+	<!-- Sweet Alert V10.13.0 -->
+	<script src="./js/sweetalert2.js" ></script>
+
+	<!-- General Styles -->
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+	<!-- Header -->
+	<header class="header full-box">
+	    <div class="header-brand text-center full-box">
+	        <a href="index.html">
+	            <img src="./assets/img/logo.png" alt="logo" class="img-fluid">
+	        </a>
+	    </div>
+
+	    <div class="header-options full-box">
+	        <nav class="header-navbar full-box poppins-regular font-weight-bold" >
+	            <ul class="list-unstyled full-box">
+	             
+					<li>					
+	                    <a href="registrationr.html" >Negocios<span class="full-box" ></span>
+						</a>
+						
+	                </li>
+					<li>
+					
+	                    <a href="index.html" >Inicio<span class="full-box" ></span></a>
+	                </li>
+	                <li>
+	                    <a href="menus.php" >Menú<span class="full-box" ></span></a>
+	                </li>
+	            </ul>
+	        </nav>
+			<div class="header-button full-box text-center btn-login-menu" >
+	            <i class="fas fa-user-alt" onclick="show_popup_login()" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Login" ></i>
+	            <div class="div-bordered popup-login">
+
+	                <!-- Inicio de sesion -->
+	                <span class="text-center poppins-regular font-weight-bold">Clientes</span>
+					<form class="full-box" method="POST" action="../controladores/login.php">
+	                    <div class="form-outline mb-4">
+	                        <input type="email" class="form-control" name="correo_electronico" id="correo_electronico" maxlength="70" required="" placeholder="Email" >
+	                    </div>
+	                    <div class="form-outline mb-4">
+	                        <input type="password" class="form-control" name="contrasena" id="contrasena" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required="" placeholder="Contraseña" >
+	                    </div>
+						<div class="form-outline mb-4">
+	                        <input type="hidden" class="form-control" name="rol_codigo" id="rol_codigo" maxlength="70" required="" value=1 >
+	                    </div>
+	                    <p class="text-center">
+	                        <button class="btn btn-info btn-sm w-100">Iniciar sesión</button>
+	                    </p>
+	                </form>
+	                </form>
+					
+	                <hr>
+	                <p class="text-center full-box">¿No tienes cuenta? <a href="registration.html">Regístrate aquí</a></p>
+
+
+					
+	                <!-- Cerrar sesion ---->
+	                <div class="text-center full-box">
+	                    <i class="fas fa-user-circle fa-4x"></i>
+	                </div>
+	                <span class="poppins-regular font-weight-bold">Nombre de usuario</span>
+	                <div class="text-center full-box">
+	                    <a href="menus.php" class="btn btn-info btn-sm w-100"><i class="fas fa-user-cog fa-fw"></i> &nbsp; Mi cuenta</a>
+	                </div>
+	                <form class="full-box" action="../controladores/cerrar_sesion.php">
+	                    <button class="btn btn-raised btn-primary btn-sm w-100" ><i class="fas fa-door-open fa-fw"></i> &nbsp; Cerrar sesión</button>
+	                </form>
+	            </div>
+	        </div>
+	                <!-- Carrito ---->
+
+	        <a href="bag.php" class="header-button full-box text-center" data-mdb-toggle="tooltip" data-mdb-placement="bottom" title="Carrito" >
+	            <i class="fas fa-shopping-bag"></i>
+	            <span class="badge bg-warning rounded-pill bag-count" >2</span>
+	        </a>
+	    </div>
+	</header>
+
+
+	<!-- Content -->
+	<div class="banner">
+	    <div class="banner-body">
+	        <h1 class="text-uppercase">CORRECAMINOS DELIBERY</h1>
+	        <p>La mejor comida y en el menor tiempo - Garantizado!</p>
+	        	    </div>
+	</div>
+
+	<div class="container container-web-page">
+	    	    <br>
+	    <div class="row">
+	        <div class="col-12 col-sm-6 col-md-4">
+	            <p class="text-center"></p>
+	            <h5 class="text-center text-uppercase poppins-regular font-weight-bold">Pizzas</h5>
+	            <p class="text-center">Si tienes hambre y quieres pedir comida a domicilio, PIZZA PEPE RONI es la mejor opción.
+
+					Elige tu pizza con el tamaño ideal. Selecciona la que mas se ajuste a ti todas tienen una masa suave y delicada.</p>
+					<a href="menus.php">Ir a PEPE RONI</a>
+					<img class='card-img-top' src='assets/img/banner_2.jpg' alt='nombre_platillo'>
+	        </div>
+	        <div class="col-12 col-sm-6 col-md-4">
+	            <p class="text-center"></p>
+	            <h5 class="text-center text-uppercase poppins-regular font-weight-bold">Marisquerias</h5>
+	            <p class="text-center">Comida con sazon costeña MARISQUEATE, los mejores mariscos pidelos a domicilio aqui.</p>
+				<br><br>
+				<a href="restaurante2.php"> Ir a MARISQUEATE</a>
+				<img class='card-img-top' src='assets/img/banner_1.jpg' alt='nombre_platillo'>
+	        </div>
+	        <div class="col-12 col-sm-6 col-md-4">
+	            <p class="text-center"></p>
+	            <h5 class="text-center text-uppercase poppins-regular font-weight-bold">Comida Mexicana</h5>
+	            <p class="text-center">¿Hay algo más delicioso que la gastronomía mexicana? realiza tu pedido en MEXICAN FOOD y disfruta de lo mejor de la cultura mexicana</p>
+				<br>
+				<a href="restaurante3.php"> Ir a MEXICAN FOOD</a>
+				<img class='card-img-top' src='assets/img/banner_3.jpg' alt='nombre_platillo'>
+			</div>
+	    </div>
+	</div>
+
+	<hr>
+	    </div>
+	    <br>
+	    <p class="text-center"><a href="menus.php" class="btn btn-primary"><i class="fas fa-hamburger fa-fw"></i> &nbsp; Ir a los Restaurantes</a></p>
+	</div> 
+
+	<hr>
+
+	<div class="container container-web-page">
+	    <div class="row justify-content-md-center">
+	        <div class="col-12 col-md-6">
+	            <figure class="full-box">
+	                <img src="assets/img/registration.png" alt="registration" class="img-fluid">
+	            </figure>
+	        </div>
+	        <div class="w-100"></div>
+	        <div class="col-12 col-md-6">
+	            <h3 class="text-center text-uppercase poppins-regular font-weight-bold">Crea tu cuenta</h3>
+	            <p class="text-justify">
+	                Crea tu cuenta para poder realizar pedidos de los mejores restaurantes hasta la puesta de tu casa, es muy fácil y rápido.
+	            </p>
+	            <p class="text-center">
+	                <a href="registration.html" class="btn btn-primary" >Crear cuenta</a>
+	            </p>
+	        </div>
+	    </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" ><i class="far fa-copyright"></i> Correcaminos Delibery 2021</h5></li>
+	                    <li> Todos los derechos reservados </li>
+	                </ul>
+	            </div>
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" >Cuenca</h5></li>
+	                    <li><i class="fas fa-map-marker-alt fa-fw"></i> Remigio Romero y Lorenzo Piedra</li>
+	                </ul>
+	            </div>
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" >Siguenos en:</h5> </li>
+	                    <li>
+	                        <a href="" class="footer-link" target="_blank" >
+	                            <i class="fab fa-facebook fa-fw"></i> Facebook
+	                        </a>
+	                    </li>
+
+	                    <li>
+	                        <a href="" class="footer-link" target="_blank" >
+	                            <i class="fab fa-youtube fa-fw"></i>
+	                                Youtube
+	                        </a>
+	                    </li>
+						<li></li><img src="assets/img/logo.png" alt="registration" class="img-fluid" width="25%"></li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+
+
+	<!-- MDBootstrap V5 -->
+	<script src="./js/mdb.min.js" ></script>
+
+	<!-- General scripts -->
+	<script src="./js/main.js" ></script>
+</body>
+</html>
